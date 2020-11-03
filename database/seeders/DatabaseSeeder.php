@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 		User::factory(4)->create();
+
 		User::create([
             'name' => 'Octavio Oyanedel Alarcón',
             'email' => 'octavio.oyanedel@gmail.com',
@@ -32,20 +33,25 @@ class DatabaseSeeder extends Seeder
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),
 		]);	
+
 		$grados = array ('Soldado','Cabo','Cabo 2°','Cabo 1°','Sargento 2°','Sargento 1°', 'Suboficial', 'Suboficial Mayor', 'Teniente', 'Capitán', 'Mayor', 'Teniente Coronel', 'Coronel', 'General');
 		for ($i = 0; $i < count($grados); $i++) { 
 			Grade::create([
 	            'name' => Str::upper($grados[$i]),
 			]);
 		}	
+
 		$divisiones = array ('I DIVISIÓN', 'II DIVISIÓN', 'III DIVISIÓN', 'IV DIVISIÓN', 'V DIVISIÓN');
 		for ($i = 0; $i < count($divisiones); $i++) { 
 			Division::create([
 	            'name' => Str::upper($divisiones[$i]),
 			]);
 		}	
+
 		Battalion::factory(20)->create();		
+
 		Regiment::factory(100)->create();	
+
 		$acciones = array ('KIA', 'WIA', 'MIA', 'POW');
 		for ($i = 0; $i < count($acciones); $i++) { 
 			Action::create([
@@ -53,9 +59,13 @@ class DatabaseSeeder extends Seeder
 	            'description' => 'Pellentesque dignissim cursus tempus. Fusce sit amet sagittis ex, at condimentum ipsum. In at ornare nisl, sit amet bibendum odio. In id erat a mi scelerisque euismod vel rhoncus tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam efficitur elit nec lobortis placerat. Vestibulum tristique est ut sem consequat, eu pretium metus tristique.'
 			]);
 		}
+
 		Conflict::factory(3)->create();
+
 		Battle::factory(100)->create();	
+
 		Soldier::factory(10000)->create();
+
 		Event::factory(5000)->create();	
     }
 }
