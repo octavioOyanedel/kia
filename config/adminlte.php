@@ -280,6 +280,7 @@ return [
                     'text' => 'Baja',
                     'url'  => '#',
                     'icon' => 'fas fa-fw fa-user',
+                    'icon_color' => 'red',
                 ],
                 [
                     'text' => 'Conflicto',
