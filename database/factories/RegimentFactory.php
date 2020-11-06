@@ -24,7 +24,7 @@ class RegimentFactory extends Factory
     {
         return [
             'name' => Str::upper($this->faker->unique()->word()),
-            'battalion_id' => $this->faker->numberBetween($min = 1, $max = 20),
+            'battalion_id' => $this->faker->numberBetween($min = 1, $max = 10),
             'division_id' => $this->faker->numberBetween($min = 1, $max = 5),
         ];
     }

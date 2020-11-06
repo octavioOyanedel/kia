@@ -48,9 +48,9 @@ class DatabaseSeeder extends Seeder
 			]);
 		}	
 
-		Battalion::factory(20)->create();		
+		Battalion::factory(10)->create();		
 
-		Regiment::factory(100)->create();	
+		Regiment::factory(50)->create();	
 
 		$acciones = array ('KIA', 'WIA', 'MIA', 'POW');
 		for ($i = 0; $i < count($acciones); $i++) { 
@@ -62,10 +62,10 @@ class DatabaseSeeder extends Seeder
 
 		Conflict::factory(3)->create();
 
-		Battle::factory(100)->create();	
+		Battle::factory(50)->create();	
 
-		Soldier::factory(10000)->create();
+		Soldier::factory(1000)->create();
 
-		Event::factory(5000)->create();	
+		Event::factory(50)->create();	
     }
 }

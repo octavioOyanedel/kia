@@ -26,9 +26,9 @@ class EventFactory extends Factory
             'latitude' => $this->faker->latitude($min = -90, $max = 90),
             'longitude' => $this->faker->longitude($min = -180, $max = 180),
             'description' => $this->faker->paragraph($nbSentences = 3, $variableNbSentences = true),
-            'soldier_id' => $this->faker->numberBetween($min = 1, $max = 10000),
+            'soldier_id' => $this->faker->numberBetween($min = 1, $max = 1000),
             'conflict_id' => $this->faker->numberBetween($min = 1, $max = 3),
-            'battle_id' => $this->faker->numberBetween($min = 1, $max = 100),
+            'battle_id' => $this->faker->numberBetween($min = 1, $max = 50),
             'action_id' => $this->faker->numberBetween($min = 1, $max = 4),
         ];
     }
